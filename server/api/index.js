@@ -1,6 +1,10 @@
 const router = require('express').Router();
-router.use('/users', require('./filename'));
-router.use('/puppies', require('./filename'));
-router.use('/kittens', require('./filename'));
+router.use('/file1', require('./file1'));
+
+router.use(function(req, res, next) {
+	const err = new Error('Not found.');
+	err.status = 404;
+	next(err);
+});
 
 module.exports = router;
