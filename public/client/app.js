@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 
 render(
 	<Provider store={store}>
-		<div>Hello world</div>
+		<div>Goodbye world</div>
 	</Provider>,
 	document.getElementById('app')
 );
